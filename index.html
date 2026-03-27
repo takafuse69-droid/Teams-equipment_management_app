@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="機器管理リスト登録アプリ - 機器の登録・点検・故障対応を一元管理">
+  <title>機器管理システム</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="app-logo">
+        <div class="app-logo-icon">⚙️</div>
+        <span class="app-logo-text">機器管理システム</span>
+      </div>
+      <div class="header-right">
+        <div class="header-status">
+          <span class="status-dot" id="connectionDot"></span>
+          <span id="connectionStatus">ローカル保存</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Left Pane: Navigation -->
+    <nav class="nav-pane" id="navPane">
+      <div class="nav-section-title">メニュー</div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" data-page="equipment" class="active" id="nav-equipment">
+            <span class="nav-icon">🏭</span>
+            <span>機器登録</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" data-page="inspection" id="nav-inspection">
+            <span class="nav-icon">🔍</span>
+            <span>点検設定</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" data-page="calendar" id="nav-calendar">
+            <span class="nav-icon">📅</span>
+            <span>点検カレンダー</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" data-page="result" id="nav-result">
+            <span class="nav-icon">📋</span>
+            <span>点検結果記録</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" data-page="failure" id="nav-failure">
+            <span class="nav-icon">🔧</span>
+            <span>故障対応</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" data-page="list" id="nav-list">
+            <span class="nav-icon">📋</span>
+            <span>機器リスト</span>
+          </a>
+        </li>
+      </ul>
+      <div class="nav-section-title" style="margin-top:24px;">設定</div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#" data-page="settings" id="nav-settings">
+            <span class="nav-icon">⚙️</span>
+            <span>SharePoint設定</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Center Pane: Content with Tabs -->
+    <main class="content-pane" id="contentPane">
+      <div class="tabs-header" id="tabsHeader">
+        <!-- Tabs will be rendered here -->
+      </div>
+      <div class="tabs-content" id="tabsContent">
+        <!-- Tab contents will be rendered here -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="js/sharepoint.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/equipment.js"></script>
+  <script src="js/inspection.js"></script>
+  <script src="js/result.js"></script>
+  <script src="js/failure.js"></script>
+  <script src="js/list.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
